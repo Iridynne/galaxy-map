@@ -1,22 +1,55 @@
 /* General */
 
+:root {
+  --background: #062c43;
+  --main-color: #054569;
+  --main-color-hover: #5591a9;
+
+  --button-size: 3em;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+  height: 0;
+}
+
 .menu-button {
-  background-color: #054569;
+  height: var(--button-size);
+  width: var(--button-size);
+  background-color: var(--main-color);
+  transition: 0.3s;
 }
 
 .menu-button:hover {
-  background-color: #5591a9;
+  background-color: var(--main-color-hover);
+}
+
+ul > .menu-button {
+  display: inline-block;
+  margin-left: 0.25em;
+}
+
+ul > .menu-button:first-child {
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+  margin: 0;
+}
+
+ul > .menu-button:last-child {
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
 }
 
 /* Menu Container */
-#menu-container {
-  height: 4em;
+.menu-container {
+  height: calc(var(--button-size) + 1em);
   width: 100%;
   position: fixed;
   z-index: 1;
   left: 0;
   top: 0;
-  /* background-color: #430d4b80; */
+  background-color: var(--background);
   color: #fff;
   overflow-x: hidden;
   transition: 0.5s;
@@ -24,57 +57,29 @@
 
 /* Menu Toggle Button */
 
-#menu-toggle {
-  height: 3em;
-  width: 3em;
-  position: fixed;
-  z-index: 1;
+.menu-toggle {
   left: 0;
   top: 0;
   border-radius: 1em;
   margin: 0.5em 0.5em;
-  color: #fff;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  transition: 0.5s;
-}
-
-image.icon {
-  height: 1em;
-  width: 1em;
-  position: relative;
-  z-index: 1;
-  fill: #fff;
 }
 
 /* Menu Options Container */
-#menu-options {
-  height: 3em;
-  width: calc(100% - 4.5em);
+.menu-options {
+  white-space: nowrap;
+  list-style-type: none;
+  height: var(--button-size);
+  max-width: calc(100% - var(--button-size) - 1.5em);
   position: fixed;
-  z-index: 1;
-  left: 4em;
+  left: calc(var(--button-size) + 1em);
   top: 0.5em;
-  background-color: #054569;
-  border-radius: 1em;
-  overflow-x: hidden;
-  transition: 0.5s;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  transition: 0.3s;
 }
 
-#menu-options.closed {
-  width: 0%;
+.menu-options.closed {
+  max-width: 0;
 }
 
 /* Auto Rotate Button */
-#auto-rotate {
-  height: 3em;
-  width: 3em;
-  position: relative;
-  z-index: 1;
-  border-radius: 1em;
-  margin: 0 0.5em 0 0.5em;
-  color: #fff;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  transition: 0.5s;
-}
