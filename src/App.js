@@ -1,13 +1,15 @@
-import "./App.css";
+import "./assets/styles/App.css";
 
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 
 import System from "./components/System";
+import Menu from "./components/Menu";
 
 export default function App() {
   return (
     <div className="App">
+      <Menu />
       <Canvas className="canvas">
         <OrbitControls
           enableZoom={true}

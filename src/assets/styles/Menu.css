@@ -1,0 +1,80 @@
+/* General */
+
+.menu-button {
+  background-color: #054569;
+}
+
+.menu-button:hover {
+  background-color: #5591a9;
+}
+
+/* Menu Container */
+#menu-container {
+  height: 4em;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  /* background-color: #430d4b80; */
+  color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+/* Menu Toggle Button */
+
+#menu-toggle {
+  height: 3em;
+  width: 3em;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  border-radius: 1em;
+  margin: 0.5em 0.5em;
+  color: #fff;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+image.icon {
+  height: 1em;
+  width: 1em;
+  position: relative;
+  z-index: 1;
+  fill: #fff;
+}
+
+/* Menu Options Container */
+#menu-options {
+  height: 3em;
+  width: calc(100% - 4.5em);
+  position: fixed;
+  z-index: 1;
+  left: 4em;
+  top: 0.5em;
+  background-color: #054569;
+  border-radius: 1em;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+#menu-options.closed {
+  width: 0%;
+}
+
+/* Auto Rotate Button */
+#auto-rotate {
+  height: 3em;
+  width: 3em;
+  position: relative;
+  z-index: 1;
+  border-radius: 1em;
+  margin: 0 0.5em 0 0.5em;
+  color: #fff;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  transition: 0.5s;
+}
