@@ -1,9 +1,20 @@
 /* General */
 
 :root {
-  --background: #062c43;
-  --main-color: #054569;
-  --main-color-hover: #5591a9;
+  /* Images */
+  --menu-icon: url("../images/icon-menu.svg");
+  --rotate-icon: url("../images/icon-rotate-camera.svg");
+  --planet-icon: url("../images/icon-planet.svg");
+
+  /* Colors */
+  --background: linear-gradient(var(--second-color), var(--first-color));
+  --first-color: #210535;
+  --second-color: #430d4b;
+  --third-color: #7b337d;
+  --fourth-color: #c874b2;
+  --fifth-color: #f5d5e0;
+
+  /* Dimensions */
 
   --button-size: 3em;
 }
@@ -14,15 +25,47 @@
   height: 0;
 }
 
+/* Icons */
+
+[class$="icon"] {
+  position: relative;
+  z-index: 1;
+  height: 80%;
+  width: 80%;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.5s;
+  filter: invert(96%) sepia(52%) saturate(463%) hue-rotate(287deg)
+    brightness(95%) contrast(100%);
+}
+
+.menu-icon {
+  background: var(--menu-icon) no-repeat;
+}
+
+.rotate-icon {
+  transform: translateY(-30%);
+  background: var(--rotate-icon) no-repeat;
+}
+
+.planet-icon {
+  height: 70%;
+  width: 70%;
+  background: var(--planet-icon) no-repeat;
+}
+
+/* Menu Buttons */
+
 .menu-button {
   height: var(--button-size);
   width: var(--button-size);
-  background-color: var(--main-color);
   transition: 0.3s;
+  background-color: var(--second-color);
 }
 
-.menu-button:hover {
-  background-color: var(--main-color-hover);
+.menu-button:active {
+  background-color: var(--first-color);
 }
 
 ul > .menu-button {
@@ -49,8 +92,7 @@ ul > .menu-button:last-child {
   z-index: 1;
   left: 0;
   top: 0;
-  background-color: var(--background);
-  color: #fff;
+  background: var(--background);
   overflow-x: hidden;
   transition: 0.5s;
 }
@@ -75,11 +117,9 @@ ul > .menu-button:last-child {
   top: 0.5em;
   overflow-x: scroll;
   overflow-y: hidden;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .menu-options.closed {
   max-width: 0;
 }
-
-/* Auto Rotate Button */

@@ -1,5 +1,6 @@
 import React from "react";
 import "../assets/styles/Menu.css";
+import menuIcon from "../assets/images/icon-menu.svg";
 
 function toggleMenu() {
   document.getElementById("options").classList.toggle("closed");
@@ -8,10 +9,20 @@ function toggleMenu() {
 export default function Menu() {
   return (
     <div className="menu-container">
-      <div className="menu-toggle menu-button" onClick={toggleMenu}></div>
+      <div
+        id="menu-toggle"
+        className="menu-toggle menu-button"
+        onClick={toggleMenu}
+      >
+        <div className="menu-icon" />
+      </div>
       <ul id="options" className="menu-options closed">
-        <li className="auto-rotate menu-button" />
-        <li className="menu-button" />
+        <li className="menu-button">
+          <div className="rotate-icon" />
+        </li>
+        <li className="menu-button">
+          <div className="planet-icon" />
+        </li>
       </ul>
     </div>
   );
