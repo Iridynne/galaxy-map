@@ -8,7 +8,7 @@ type SunProps = {
 const Sun = ({
     size,
 }: SunProps) => {
-  // const textureLoader = useLoader(TextureLoader, "");
+  const emmisiveMap = useLoader(TextureLoader, "/assets/images/sun.jpg");
 
   return (
     <>
@@ -16,10 +16,8 @@ const Sun = ({
       <mesh>
         <sphereBufferGeometry attach="geometry" args={[size]} />
         <meshLambertMaterial
-          attach="material"
-          color="orange"
+          emissiveMap={emmisiveMap}
           emissiveIntensity={1}
-          emissive="red"
         />
       </mesh>
     </>
