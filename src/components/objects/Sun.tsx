@@ -1,3 +1,6 @@
+import { useLoader } from "@react-three/fiber";
+import { TextureLoader } from "three";
+
 type SunProps = {
     size: Number,
 };
@@ -5,6 +8,8 @@ type SunProps = {
 const Sun = ({
     size,
 }: SunProps) => {
+  // const textureLoader = useLoader(TextureLoader, "");
+
   return (
     <>
       <pointLight intensity={1} />

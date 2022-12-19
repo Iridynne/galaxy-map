@@ -1,6 +1,8 @@
+import { Vector3 } from "@react-three/fiber";
+
 type PlanetProps = {
     size: Number,
-    position: [Number, Number, Number],
+    position: Vector3,
 };
 
 const Planet = ({

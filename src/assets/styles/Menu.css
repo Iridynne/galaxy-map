@@ -2,9 +2,9 @@
 
 :root {
     /* Images */
-    --menu-icon: url("../icons/icon-menu.svg");
-    --rotate-icon: url("../icons/icon-rotate-camera.svg");
-    --planet-icon: url("../icons/icon-planet.svg");
+    --menu-icon: url("/src/public/assets/icons/icon-menu.svg");
+    --rotate-icon: url("/src/public/assets/icons/icon-rotate-camera.svg");
+    --planet-icon: url("/src/public/assets/icons/icon-planet.svg");
   
     /* Colors */
     --background: linear-gradient(var(--second-color), var(--first-color));
