@@ -18,6 +18,7 @@ const Sun = ({
         <meshLambertMaterial
           emissiveMap={emmisiveMap}
           emissiveIntensity={1}
+          emissive="white"
         />
       </mesh>
     </>
