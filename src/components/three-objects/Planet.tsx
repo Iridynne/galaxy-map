@@ -12,11 +12,11 @@ const Planet = ({
     sizeMultiplier,
     position
 }: PlanetProps) => {
-  const actualSize: Number = Size[sizeUnit] * sizeMultiplier;
+  const planetSize: Number = Size[sizeUnit] * sizeMultiplier;
 
   return (
     <mesh position={position}>
-      <sphereBufferGeometry attach="geometry" args={[actualSize]} />
+      <sphereBufferGeometry attach="geometry" args={[planetSize]} />
       <meshLambertMaterial attach="material" color="white" />
     </mesh>
   );
