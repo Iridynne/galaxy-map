@@ -1,4 +1,4 @@
-import { EffectComposer, Bloom, DepthOfField } from '@react-three/postprocessing';
+import { EffectComposer, Bloom } from '@react-three/postprocessing';
 
 const PostProcess = () => {
     return (
