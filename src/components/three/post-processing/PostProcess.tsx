@@ -1,8 +1,8 @@
-import { EffectComposer, Bloom } from '@react-three/postprocessing';
+import { EffectComposer, Bloom, DepthOfField } from '@react-three/postprocessing';
 
 const PostProcess = () => {
     return (
-        <EffectComposer autoClear={false}>
+        <EffectComposer>
             <Bloom
                 luminanceThreshold={0}
                 luminanceSmoothing={0.9}
