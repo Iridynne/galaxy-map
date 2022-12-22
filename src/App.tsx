@@ -1,21 +1,23 @@
 import { OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 
+import System from './components/three/objects/System';
+import PostProcess from './components/three/postprocessing/PostProcess';
+
 import "./App.css"
-import System from './components/three-objects/System';
 
 function App() {
   return (
     <div className="App">
       <Canvas className='canvas'>
+        <PostProcess />
         <OrbitControls
           enableZoom={true}
-          minDistance={1}
-          maxDistance={1000}
-          zoom0={1000}
+          minDistance={2}
+          maxDistance={15}
           enablePan={false}
-          minPolarAngle={Math.PI / 3}
-          maxPolarAngle={(2 * Math.PI) / 3}
+          minPolarAngle={Math.PI / 2}
+          maxPolarAngle={(- Math.PI) / 2}
         />
         <System />
       </Canvas>
