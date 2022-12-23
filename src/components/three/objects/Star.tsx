@@ -3,17 +3,18 @@ import { useLoader } from '@react-three/fiber';
 import { TextureLoader } from 'three';
 import Body, { BodyProps } from './Body';
 
-type SunProps = {
+type StarProps = {
     textureName: string,
 } & BodyProps;
 
-const Sun = ({
+const Star = ({
     size,
     mass,
+    rotationPeriod,
     position=[0, 0, 0],
     velocity=[0, 0, 0],
     textureName,
-}: SunProps) => {
+}: StarProps) => {
     const texture = useLoader(TextureLoader, `/textures/${textureName}`);
 
     return (
@@ -22,6 +23,7 @@ const Sun = ({
             <Body
                 size={size}
                 mass={mass}
+                rotationPeriod={rotationPeriod}
                 position={position}
                 velocity={velocity}
                 materialProps={{
@@ -35,4 +37,4 @@ const Sun = ({
     );
 }
 
-export default Sun;
+export default Star;

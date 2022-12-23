@@ -37,5 +37,19 @@ export const PlanetSize: PlanetProps = {
 
 export const SunSize = 109.2;
 
+// Rotation Period
+export const PlanetRotationPeriod: PlanetProps = {
+    Mercury: 58.8,
+    Venus: -244,
+    Earth: 1,
+    Mars: 1.03,
+    Jupiter: 0.415,
+    Saturn: 0.445,
+    Uranus: -0.720,
+    Neptune: 0.673
+};
+
+export const SunRotationPeriod = 27;
+
 // Physics Constants
 export const G = 1;

@@ -10,6 +10,7 @@ export type PlanetProps = {
 const Planet = ({
     size,
     mass,
+    rotationPeriod,
     position=[0, 0, 0],
     velocity=[0, 0, 0],
     textureFile,
@@ -19,6 +20,7 @@ const Planet = ({
         <Body
             size={size}
             mass={mass}
+            rotationPeriod={rotationPeriod}
             position={position}
             velocity={velocity}
             materialProps={{
