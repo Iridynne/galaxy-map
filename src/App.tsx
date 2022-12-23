@@ -1,4 +1,4 @@
-import { OrbitControls, Stars } from '@react-three/drei';
+import { OrbitControls, Stars, TransformControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 
 import System from './components/three/objects/System';
@@ -11,9 +11,10 @@ function App() {
     <div className="App">
       <Canvas className='canvas'>
         <OrbitControls
-          enableZoom={true}
-          minDistance={2}
-          maxDistance={15}
+          makeDefault
+          minDistance={150}
+          maxDistance={1000}
+          zoomSpeed={2}
           enablePan={false}
           minPolarAngle={Math.PI / 3}
           maxPolarAngle={2 *Math.PI / 3}
@@ -21,7 +22,7 @@ function App() {
         <PostProcess />
         <Stars
           radius={100}
-          depth={50}
+          depth={800}
           count={5000}
           factor={4}
           saturation={0}

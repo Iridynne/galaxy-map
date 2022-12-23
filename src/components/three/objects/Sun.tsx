@@ -8,6 +8,7 @@ type SunProps = {
 } & BodyProps;
 
 const Sun = ({
+    size,
     mass,
     position=[0, 0, 0],
     velocity=[0, 0, 0],
@@ -19,6 +20,7 @@ const Sun = ({
         <>
             <pointLight intensity={1} />
             <Body
+                size={size}
                 mass={mass}
                 position={position}
                 velocity={velocity}

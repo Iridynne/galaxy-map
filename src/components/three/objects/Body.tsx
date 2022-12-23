@@ -3,6 +3,7 @@ import { MeshLambertMaterialProps } from '@react-three/fiber';
 import { Vector3Tuple } from 'three';
 
 export type BodyProps = {
+    size: number,
     mass: number,
     position?: Vector3Tuple,
     velocity?: Vector3Tuple,
@@ -10,6 +11,7 @@ export type BodyProps = {
 };
 
 const Body = ({
+    size,
     mass,
     position=[0, 0, 0],
     velocity=[0, 0, 0],
@@ -19,7 +21,7 @@ const Body = ({
     <mesh position={position}>
         <sphereBufferGeometry
             attach="geometry"
-            args={[]}
+            args={[size]}
         />
         <meshLambertMaterial
             attach="material"

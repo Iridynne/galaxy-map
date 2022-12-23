@@ -8,6 +8,7 @@ export type PlanetProps = {
 } & BodyProps;
 
 const Planet = ({
+    size,
     mass,
     position=[0, 0, 0],
     velocity=[0, 0, 0],
@@ -16,6 +17,7 @@ const Planet = ({
     const texture = useLoader(TextureLoader, `/textures/${textureFile}`);
     return (
         <Body
+            size={size}
             mass={mass}
             position={position}
             velocity={velocity}

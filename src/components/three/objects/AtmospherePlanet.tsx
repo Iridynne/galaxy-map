@@ -8,6 +8,7 @@ type AtmospherePlanetProps = {
 } & PlanetProps;
 
 const AtmospherePlanet = ({
+    size,
     mass,
     position=[0, 0, 0],
     velocity=[0, 0, 0],
@@ -19,13 +20,14 @@ const AtmospherePlanet = ({
     return (
         <>
             <Planet
+                size={size}
                 mass={mass}
                 position={position}
                 velocity={velocity}
                 textureFile={textureFile}
             />
             <mesh position={position}>
-                <sphereBufferGeometry />
+                <sphereBufferGeometry args={[size]} />
                 <meshLambertMaterial
                     alphaMap={atmosphere}
                     transparent

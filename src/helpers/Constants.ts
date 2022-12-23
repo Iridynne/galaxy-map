@@ -1,14 +1,13 @@
-/* eslint-disable import/no-anonymous-default-export */
-export default {
-    mercurySize: 0.38,
-    venusSize: 0.95,
-    earthSize: 1,
-    marsSize: 0.53,
-    jupiterSize: 11.2,
-    saturnSize: 0.95,
-    uranusSize: 4,
-    neptuneSize: 3.88,
-    plutoSize: 0.18,
+export const PlanetSize = {
+    Mercury: 0.383,
+    Venus: 0.949,
+    Earth: 1,
+    Mars: 0.532,
+    Jupiter: 11.21,
+    Saturn: 0.945,
+    Uranus: 4.01,
+    Neptune: 3.88,
+    PLuto: 0.187,
 };
 
 export const G = 1;
