@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLoader } from '@react-three/fiber';
 import { TextureLoader } from 'three';
-import Body, { BodyProps } from './Body';
+import Body, { BodyProps } from '../Body';
 
 export type PlanetProps = {
     textureFile: string,

@@ -22,7 +22,7 @@ function App() {
         <PostProcess />
         <Stars
           radius={100}
-          depth={800}
+          depth={500}
           count={5000}
           factor={4}
           saturation={0}
