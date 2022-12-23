@@ -1,4 +1,4 @@
-import { OrbitControls, Stars, TransformControls } from '@react-three/drei';
+import { OrbitControls, Stars } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 
 import System from './components/three/objects/System';
