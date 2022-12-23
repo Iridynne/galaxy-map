@@ -10,3 +10,5 @@ export default {
     neptuneSize: 3.88,
     plutoSize: 0.18,
 };
+
+export const G = 1;

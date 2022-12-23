@@ -1,3 +1,4 @@
+import React from 'react';
 import { MeshLambertMaterialProps } from '@react-three/fiber';
 import { Vector3Tuple } from 'three';
 
@@ -14,9 +15,6 @@ const Body = ({
     velocity=[0, 0, 0],
     materialProps,
 }: BodyProps) => {
-    // Physics values
-    const r = mass;
-
     return (
     <mesh position={position}>
         <sphereBufferGeometry

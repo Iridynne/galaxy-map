@@ -10,7 +10,6 @@ function App() {
   return (
     <div className="App">
       <Canvas className='canvas'>
-        <PostProcess />
         <OrbitControls
           enableZoom={true}
           minDistance={2}
@@ -19,6 +18,7 @@ function App() {
           minPolarAngle={Math.PI / 3}
           maxPolarAngle={2 *Math.PI / 3}
         />
+        <PostProcess />
         <Stars
           radius={100}
           depth={50}

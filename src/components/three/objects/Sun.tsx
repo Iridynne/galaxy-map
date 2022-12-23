@@ -1,15 +1,19 @@
+import React from 'react';
 import { useLoader } from '@react-three/fiber';
 import { TextureLoader } from 'three';
 import Body, { BodyProps } from './Body';
 
-export type SunProps = {} & BodyProps;
+type SunProps = {
+    textureName: string,
+} & BodyProps;
 
 const Sun = ({
     mass,
     position=[0, 0, 0],
     velocity=[0, 0, 0],
-}: BodyProps) => {
-    const texture = useLoader(TextureLoader, "/textures/sun.jpg");
+    textureName,
+}: SunProps) => {
+    const texture = useLoader(TextureLoader, `/textures/${textureName}`);
 
     return (
         <>
@@ -24,7 +28,6 @@ const Sun = ({
                     emissiveMap: texture,
                 }}
             />
-            
         </>
     );
 }
