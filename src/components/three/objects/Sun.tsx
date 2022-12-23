@@ -28,6 +28,7 @@ const Sun = ({
                     emissive: "white",
                     emissiveIntensity: 1,
                     emissiveMap: texture,
+                    toneMapped: false
                 }}
             />
         </>

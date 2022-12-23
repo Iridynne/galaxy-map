@@ -35,7 +35,7 @@ export const PlanetSize: PlanetProps = {
     Neptune: 3.88,
 };
 
-export const SunSize = 109;
+export const SunSize = 109.2;
 
 // Physics Constants
 export const G = 1;
