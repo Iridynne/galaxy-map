@@ -1,5 +1,6 @@
 import { Stars } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
+import { PCFSoftShadowMap } from 'three';
 
 import System from './components/three/objects/System';
 import GalaxyCamera from './components/three/camera/GalaxyCamera';
@@ -9,7 +10,7 @@ import "./App.css"
 function App() {
   return (
     <div className="App">
-      <Canvas className='canvas'>
+      <Canvas className='canvas' shadows={{ type: PCFSoftShadowMap }}>
         <GalaxyCamera />
         <Stars
           radius={100}

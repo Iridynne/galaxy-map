@@ -11,6 +11,7 @@ export default function System() {
         size={SunSize}
         mass={SunMass}
         rotationPeriod={SunRotationPeriod}
+        position={[0, 100, 0]}
         velocity={[0, 0, 0]}
         textureName="sun.jpg"
       />

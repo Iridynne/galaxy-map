@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLoader } from '@react-three/fiber';
-import { TextureLoader } from 'three';
+import { PointLight, TextureLoader } from 'three';
 import Body, { BodyProps } from './Body';
 
 type StarProps = {
@@ -17,9 +17,24 @@ const Star = ({
 }: StarProps) => {
     const texture = useLoader(TextureLoader, `/textures/${textureName}`);
 
+    const lightRef = React.useRef<PointLight>(null);
+
+    // Adjust shadow resolution
+    React.useLayoutEffect(() => {
+        if (!lightRef.current) return;
+
+        lightRef.current.shadow.mapSize.width = 2048;
+        lightRef.current.shadow.mapSize.height = 2048;
+    });
+
     return (
         <>
-            <pointLight intensity={1} />
+            <pointLight
+                ref={lightRef}
+                position={position}
+                intensity={1}
+                castShadow
+            />
             <Body
                 size={size}
                 mass={mass}

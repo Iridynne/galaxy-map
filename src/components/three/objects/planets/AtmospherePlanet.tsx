@@ -21,12 +21,10 @@ const AtmospherePlanet = ({
     const meshRef = React.useRef<Mesh>(null);
     
     useFrame(() => {
-        if (!meshRef.current) {
-            return;
-        }
+        if (!meshRef.current) return;
 
         meshRef.current.rotation.y += 1 / rotationPeriod * Math.pow(10, -3);
-    })
+    });
 
     return (
         <>
@@ -37,6 +35,8 @@ const AtmospherePlanet = ({
                 position={position}
                 velocity={velocity}
                 textureFile={textureFile}
+                castShadow
+                receiveShadow
             />
             <mesh ref={meshRef} position={position}>
                 <sphereBufferGeometry args={[size]} />

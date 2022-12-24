@@ -16,6 +16,7 @@ const Planet = ({
     textureFile,
 }: PlanetProps) => {
     const texture = useLoader(TextureLoader, `/textures/${textureFile}`);
+
     return (
         <Body
             size={size}
@@ -26,6 +27,8 @@ const Planet = ({
             materialProps={{
                 map: texture,
             }}
+            castShadow
+            receiveShadow
         />
     );
 }
