@@ -9,6 +9,7 @@ type RingedPlanetProps = {
 } & PlanetProps;
 
 const RingedPlanet = ({
+    name,
     size,
     mass,
     rotationPeriod,
@@ -43,26 +44,24 @@ const RingedPlanet = ({
     return (
         <>
             <Planet
+                name={name}
                 size={size}
                 mass={mass}
                 rotationPeriod={rotationPeriod}
                 position={position}
                 velocity={velocity}
-                textureFile={textureFile}
-            />
+                textureFile={textureFile} />
             <mesh
                 ref={meshRef1}
                 position={[position[0], position[1] + 0.25, position[2]]}
                 rotation={new Euler(- Math.PI / 2, 0, 0)}
                 geometry={geometry}
                 castShadow
-                receiveShadow
-            >
+                receiveShadow >
                 <meshLambertMaterial
                     attach="material"
                     map={ring}
-                    transparent
-                />
+                    transparent />
             </mesh>
             <mesh
                 ref={meshRef2}
@@ -70,13 +69,11 @@ const RingedPlanet = ({
                 rotation={new Euler(Math.PI / 2, 0, 0)}
                 geometry={geometry}
                 castShadow
-                receiveShadow
-            >
+                receiveShadow >
                 <meshLambertMaterial
                     attach="material"
                     map={ring}
-                    transparent
-                />
+                    transparent />
             </mesh>
         </>
     );

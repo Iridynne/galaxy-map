@@ -9,8 +9,7 @@ const PostProcess = () => {
                 mipmapBlur
                 luminanceThreshold={-1}
                 luminanceSmoothing={0.9}
-                height={300}
-            />
+                height={300} />
         </EffectComposer>
     );
 };

@@ -8,6 +8,7 @@ type AtmospherePlanetProps = {
 } & PlanetProps;
 
 const AtmospherePlanet = ({
+    name,
     size,
     mass,
     rotationPeriod,
@@ -29,6 +30,7 @@ const AtmospherePlanet = ({
     return (
         <>
             <Planet
+                name={name}
                 size={size}
                 mass={mass}
                 rotationPeriod={rotationPeriod}
@@ -36,14 +38,15 @@ const AtmospherePlanet = ({
                 velocity={velocity}
                 textureFile={textureFile}
                 castShadow
-                receiveShadow
-            />
-            <mesh ref={meshRef} position={position}>
+                receiveShadow />
+            <mesh
+                ref={meshRef}
+                position={position}
+                receiveShadow >
                 <sphereBufferGeometry args={[size]} />
                 <meshLambertMaterial
                     alphaMap={atmosphere}
-                    transparent
-                />
+                    transparent />
             </mesh>
         </>
     );

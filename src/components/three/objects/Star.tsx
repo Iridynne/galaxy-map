@@ -8,6 +8,7 @@ type StarProps = {
 } & BodyProps;
 
 const Star = ({
+    name,
     size,
     mass,
     rotationPeriod,
@@ -33,9 +34,9 @@ const Star = ({
                 ref={lightRef}
                 position={position}
                 intensity={1}
-                castShadow
-            />
+                castShadow />
             <Body
+                name={name}
                 size={size}
                 mass={mass}
                 rotationPeriod={rotationPeriod}
@@ -46,8 +47,7 @@ const Star = ({
                     emissiveIntensity: 1,
                     emissiveMap: texture,
                     toneMapped: false
-                }}
-            />
+                }} />
         </>
     );
 }

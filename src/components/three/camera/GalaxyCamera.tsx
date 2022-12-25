@@ -1,21 +1,33 @@
 import React from 'react';
 
 import { OrbitControls } from '@react-three/drei';
-import PostProcess from './PostProcess';
+import { Vector3Tuple } from 'three';
 
-const GalaxyCamera = () => {
+type GalaxyCameraProps = {
+    makeDefault?: boolean,
+    target: Vector3Tuple,
+};
+
+const GalaxyCamera = ({
+    makeDefault = false,
+    target
+}: GalaxyCameraProps) => {
     return (
         <>
-            <OrbitControls
-                makeDefault
-                minDistance={150}
-                maxDistance={1000}
-                zoomSpeed={2}
-                enablePan={false}
-                minPolarAngle={Math.PI / 3}
-                maxPolarAngle={2 *Math.PI / 3}
-            />
-            <PostProcess />
+            {
+                makeDefault && (
+                    <OrbitControls
+                        makeDefault
+                        target={target}
+                        minDistance={0.1}
+                        maxDistance={1000}
+                        rotateSpeed={1}
+                        zoomSpeed={1}
+                        enablePan={false}
+                        minPolarAngle={Math.PI / 3}
+                        maxPolarAngle={2 *Math.PI / 3} />
+                )
+            }
         </>
     );
 };
