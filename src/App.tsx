@@ -14,7 +14,7 @@ function App() {
       <Canvas className='canvas' shadows={{ type: PCFSoftShadowMap }}>
         <GalaxyCamera />
         <Stars
-          radius={100}
+          radius={10}
           depth={500}
           count={2500}
           factor={4}
