@@ -1,4 +1,4 @@
-import { Stars } from '@react-three/drei';
+import { Stars, Stats } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { PCFSoftShadowMap } from 'three';
 
@@ -10,6 +10,7 @@ import "./App.css"
 function App() {
   return (
     <div className="App">
+      <Stats />
       <Canvas className='canvas' shadows={{ type: PCFSoftShadowMap }}>
         <GalaxyCamera />
         <Stars
