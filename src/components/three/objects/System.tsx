@@ -82,6 +82,14 @@ export default function System() {
         velocity={[1, 0, 0]}
         textureFile="neptune.jpg"
       />
+      <Planet
+        size={PlanetSize.Pluto}
+        mass={PlanetMass.Pluto}
+        rotationPeriod={PlanetRotationPeriod.Pluto}
+        position={[240, 0, 0]}
+        velocity={[1, 0, 0]}
+        textureFile="pluto.jpg"
+      />
     </>
   );
 }

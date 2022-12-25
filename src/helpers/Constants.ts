@@ -7,6 +7,7 @@ type PlanetProps = {
     Saturn: number,
     Uranus: number,
     Neptune: number,
+    Pluto: number,
 };
 
 // Masses
@@ -18,7 +19,8 @@ export const PlanetMass: PlanetProps = {
     Jupiter: 317.8,
     Saturn: 95.2,
     Uranus: 14.5,
-    Neptune: 17.1
+    Neptune: 17.1,
+    Pluto: 0.0022,
 };
 
 export const SunMass = 333000;
@@ -33,6 +35,7 @@ export const PlanetSize: PlanetProps = {
     Saturn: 9.45,
     Uranus: 4.01,
     Neptune: 3.88,
+    Pluto: 0.187,
 };
 
 export const SunSize = 109.2;
@@ -46,7 +49,8 @@ export const PlanetRotationPeriod: PlanetProps = {
     Jupiter: 0.415,
     Saturn: 0.445,
     Uranus: -0.720,
-    Neptune: 0.673
+    Neptune: 0.673,
+    Pluto: 6.41,
 };
 
 export const SunRotationPeriod = 27;
