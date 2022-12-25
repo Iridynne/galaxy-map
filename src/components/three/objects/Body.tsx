@@ -36,7 +36,7 @@ const Body = ({
 
     return (
         <>
-            <GalaxyCamera makeDefault={name === "Earth"} target={position} />
+            <GalaxyCamera makeDefault={name === "Mercury"} target={position} />
             <mesh
                 ref={mesh}
                 position={position}

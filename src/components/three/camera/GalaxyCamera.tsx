@@ -19,7 +19,7 @@ const GalaxyCamera = ({
                     <OrbitControls
                         makeDefault
                         target={target}
-                        minDistance={0.1}
+                        minDistance={1}
                         maxDistance={1000}
                         rotateSpeed={1}
                         zoomSpeed={1}
