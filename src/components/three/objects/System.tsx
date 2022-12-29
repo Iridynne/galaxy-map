@@ -8,7 +8,6 @@ export default function System() {
   return (
     <>
       <Star
-        name="Sun"
         size={SunSize}
         mass={SunMass}
         rotationPeriod={SunRotationPeriod}
@@ -16,7 +15,6 @@ export default function System() {
         velocity={[0, 0, 0]}
         textureName="sun.jpg" />
       <Planet
-        name="Mercury"
         size={PlanetSize.Mercury}
         mass={PlanetMass.Mercury}
         rotationPeriod={PlanetRotationPeriod.Mercury}
@@ -24,7 +22,6 @@ export default function System() {
         velocity={[1, 0, 0]}
         textureFile="mercury.jpg" />
       <AtmospherePlanet
-        name="Venus"
         size={PlanetSize.Venus}
         mass={PlanetMass.Venus}
         rotationPeriod={PlanetRotationPeriod.Venus}
@@ -33,7 +30,6 @@ export default function System() {
         textureFile="venus.jpg"
         atmosphereFile="venus_atmosphere.jpg" />
       <AtmospherePlanet
-        name="Earth"
         size={PlanetSize.Earth}
         mass={PlanetMass.Earth}
         rotationPeriod={PlanetRotationPeriod.Earth}
@@ -42,7 +38,6 @@ export default function System() {
         textureFile="earth_day.jpg"
         atmosphereFile="earth_clouds.jpg" />
       <Planet
-        name="Mars"
         size={PlanetSize.Mars}
         mass={PlanetMass.Mars}
         rotationPeriod={PlanetRotationPeriod.Mars}
@@ -50,7 +45,6 @@ export default function System() {
         velocity={[1, 0, 0]}
         textureFile="mars.jpg" />
       <Planet
-        name="Jupiter"
         size={PlanetSize.Jupiter}
         mass={PlanetMass.Jupiter}
         rotationPeriod={PlanetRotationPeriod.Jupiter}
@@ -58,7 +52,6 @@ export default function System() {
         velocity={[1, 0, 0]}
         textureFile="jupiter.jpg" />
       <RingedPlanet
-        name="Saturn"
         size={PlanetSize.Saturn}
         mass={PlanetMass.Saturn}
         rotationPeriod={PlanetRotationPeriod.Saturn}
@@ -67,7 +60,6 @@ export default function System() {
         textureFile="saturn.jpg"
         ringFile="saturn_ring.png" />
       <Planet
-        name="Uranus"
         size={PlanetSize.Uranus}
         mass={PlanetMass.Uranus}
         rotationPeriod={PlanetRotationPeriod.Uranus}
@@ -75,7 +67,6 @@ export default function System() {
         velocity={[1, 0, 0]}
         textureFile="uranus.jpg" />
       <Planet
-        name="Neptune"
         size={PlanetSize.Neptune}
         mass={PlanetMass.Neptune}
         rotationPeriod={PlanetRotationPeriod.Neptune}
@@ -83,7 +74,6 @@ export default function System() {
         velocity={[1, 0, 0]}
         textureFile="neptune.jpg" />
       <Planet
-        name="Pluto"
         size={PlanetSize.Pluto}
         mass={PlanetMass.Pluto}
         rotationPeriod={PlanetRotationPeriod.Pluto}

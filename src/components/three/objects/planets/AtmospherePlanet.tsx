@@ -8,7 +8,6 @@ type AtmospherePlanetProps = {
 } & PlanetProps;
 
 const AtmospherePlanet = ({
-    name,
     size,
     mass,
     rotationPeriod,
@@ -30,7 +29,6 @@ const AtmospherePlanet = ({
     return (
         <>
             <Planet
-                name={name}
                 size={size}
                 mass={mass}
                 rotationPeriod={rotationPeriod}

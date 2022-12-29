@@ -9,7 +9,6 @@ type RingedPlanetProps = {
 } & PlanetProps;
 
 const RingedPlanet = ({
-    name,
     size,
     mass,
     rotationPeriod,
@@ -44,7 +43,6 @@ const RingedPlanet = ({
     return (
         <>
             <Planet
-                name={name}
                 size={size}
                 mass={mass}
                 rotationPeriod={rotationPeriod}

@@ -8,7 +8,6 @@ export type PlanetProps = {
 } & BodyProps;
 
 const Planet = ({
-    name,
     size,
     mass,
     rotationPeriod,
@@ -20,7 +19,6 @@ const Planet = ({
 
     return (
         <Body
-            name={name}
             size={size}
             mass={mass}
             rotationPeriod={rotationPeriod}

@@ -1,10 +1,8 @@
 import React from 'react';
 import { MeshLambertMaterialProps, useFrame } from '@react-three/fiber';
 import { Mesh, Vector3Tuple } from 'three';
-import GalaxyCamera from '../camera/GalaxyCamera';
 
 export type BodyProps = {
-    name: string,
     size: number,
     mass: number,
     position?: Vector3Tuple,
@@ -16,7 +14,6 @@ export type BodyProps = {
 };
 
 const Body = ({
-    name,
     size,
     mass,
     rotationPeriod,
@@ -36,7 +33,6 @@ const Body = ({
 
     return (
         <>
-            <GalaxyCamera makeDefault={name === "Mercury"} target={position} />
             <mesh
                 ref={mesh}
                 position={position}

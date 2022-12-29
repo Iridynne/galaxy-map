@@ -8,7 +8,6 @@ type StarProps = {
 } & BodyProps;
 
 const Star = ({
-    name,
     size,
     mass,
     rotationPeriod,
@@ -36,7 +35,6 @@ const Star = ({
                 intensity={1}
                 castShadow />
             <Body
-                name={name}
                 size={size}
                 mass={mass}
                 rotationPeriod={rotationPeriod}
