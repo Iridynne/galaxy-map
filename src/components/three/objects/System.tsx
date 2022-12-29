@@ -1,4 +1,5 @@
-import { PlanetMass, PlanetRotationPeriod, PlanetSize, SunMass, SunRotationPeriod, SunSize } from "../../../helpers/Constants";
+import React from 'react';
+import { PlanetMass, PlanetRotationPeriod, PlanetSize, SunMass, SunRotationPeriod, SunSize } from "../../../services/constants/SolarSystemProps";
 import AtmospherePlanet from "./planets/AtmospherePlanet";
 import Planet from "./planets/Planet";
 import RingedPlanet from "./planets/RingedPlanet";

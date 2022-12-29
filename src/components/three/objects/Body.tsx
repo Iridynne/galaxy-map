@@ -1,6 +1,7 @@
 import React from 'react';
 import { MeshLambertMaterialProps, useFrame } from '@react-three/fiber';
 import { Mesh, Vector3Tuple } from 'three';
+import { useCamera } from '../../../services/useCamera/useCamera';
 
 export type BodyProps = {
     size: number,
@@ -23,6 +24,8 @@ const Body = ({
     castShadow = false,
     receiveShadow = false,
 }: BodyProps) => {
+    const { setTarget } = useCamera();
+
     const mesh = React.useRef<Mesh>(null);
 
     useFrame(() => {
@@ -34,6 +37,10 @@ const Body = ({
     return (
         <>
             <mesh
+                onClick={() => setTarget({
+                    target: position,
+                    distance: size * 2
+                })}
                 ref={mesh}
                 position={position}
                 castShadow={castShadow}

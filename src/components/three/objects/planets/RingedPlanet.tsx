@@ -2,7 +2,7 @@ import React from 'react';
 import { useFrame, useLoader } from '@react-three/fiber';
 import { Euler, Mesh, RingGeometry, TextureLoader, Vector3 } from 'three';
 import Planet, { PlanetProps } from './Planet';
-import { PlanetSize } from '../../../../helpers/Constants';
+import { PlanetSize } from '../../../../services/constants/SolarSystemProps';
 
 type RingedPlanetProps = {
     ringFile: string,
