@@ -1,3 +1,4 @@
+import React from 'react';
 import { Stars, Stats } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { PCFSoftShadowMap } from 'three';
