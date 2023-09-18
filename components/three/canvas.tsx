@@ -1,4 +1,4 @@
-import { ReactElement, ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { Canvas } from '@react-three/fiber';
 
 type CanvasProps = {
@@ -6,7 +6,7 @@ type CanvasProps = {
 }
 
 const GMCanvas = ({ children }: CanvasProps) => (
-    <Canvas className='bg-blue-500'>
+    <Canvas className='bg-blue-800'>
         {children}
     </Canvas>
 )
