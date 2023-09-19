@@ -6,7 +6,7 @@ type CanvasProps = {
 }
 
 const GMCanvas = ({ children }: CanvasProps) => (
-    <Canvas className='bg-blue-800'>
+    <Canvas className='bg-gray-900'>
         {children}
     </Canvas>
 )

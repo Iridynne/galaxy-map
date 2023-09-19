@@ -2,14 +2,15 @@ import { useTexture } from '@react-three/drei';
 import React from 'react';
 import { Vector3Tuple } from "three"
 
-type BodyProps = {
+type StarProps = {
     size: number,
     position?: Vector3Tuple,
-    texture?: string,
+    color?: string,
+    lightIntensity?: number,
 }
 
-const GMBody = ({ size, position=[0, 0, 0], texture }: BodyProps) => {
-    const colorMap = useTexture(texture ?? 'textures/fallback.jpg')
+const GMStar = ({ size, position=[0, 0, 0], color="white", lightIntensity=20 }: StarProps) => {
+    const [ colorMap, lightMap ] = useTexture(['textures/star.jpg', 'textures/star_light.jpg'])
 
     return (
         <mesh
@@ -22,9 +23,12 @@ const GMBody = ({ size, position=[0, 0, 0], texture }: BodyProps) => {
             <meshBasicMaterial
                 attach="material"
                 map={colorMap}
+                lightMap={lightMap}
+                lightMapIntensity={lightIntensity}
+                color={color}
             />
         </mesh>
     );
 }
 
-export default GMBody
+export default GMStar
