@@ -1,12 +1,12 @@
 import { useTexture } from '@react-three/drei';
 import React from 'react';
-import { Vector3Tuple } from "three"
+import { Vector3Tuple } from "three";
 
 type PlanetProps = {
     size: number,
     position?: Vector3Tuple,
     texture?: string,
-}
+};
 
 const GMPlanet = ({ size, position=[0, 0, 0], texture }: PlanetProps) => {
     const colorMap = useTexture(texture ?? 'textures/fallback.jpg')
@@ -25,6 +25,6 @@ const GMPlanet = ({ size, position=[0, 0, 0], texture }: PlanetProps) => {
             />
         </mesh>
     );
-}
+};
 
-export default GMPlanet
+export default GMPlanet;

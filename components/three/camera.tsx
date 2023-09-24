@@ -5,13 +5,13 @@ type CameraProps = {
     minDistance?: number,
     maxDistance?: number,
     zoomSpeed?: number,
-}
+};
 
 const GMCamera = (props: CameraProps) => (
     <OrbitControls
         {...props}
         enablePan={false}
     />
-)
+);
 
-export default GMCamera
+export default GMCamera;

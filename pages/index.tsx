@@ -17,6 +17,6 @@ Home.getLayout = (props) => (
     <div className="w-screen h-screen">
         {props}
     </div>
-)
+);
 
 export default Home;

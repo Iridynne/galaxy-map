@@ -1,13 +1,13 @@
 import { useTexture } from '@react-three/drei';
 import React from 'react';
-import { Vector3Tuple } from "three"
+import { Vector3Tuple } from "three";
 
 type StarProps = {
     size: number,
     position?: Vector3Tuple,
     color?: string,
     lightIntensity?: number,
-}
+};
 
 const GMStar = ({ size, position=[0, 0, 0], color="white", lightIntensity=20 }: StarProps) => {
     const [ colorMap, lightMap ] = useTexture(['textures/star.jpg', 'textures/star_light.jpg'])
@@ -29,6 +29,6 @@ const GMStar = ({ size, position=[0, 0, 0], color="white", lightIntensity=20 }: 
             />
         </mesh>
     );
-}
+};
 
-export default GMStar
+export default GMStar;
